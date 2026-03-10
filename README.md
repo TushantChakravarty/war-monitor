@@ -8,7 +8,7 @@
 
 ---
 
-https://github.com/user-attachments/assets/299fbc0b-f209-446b-854d-9de4f6ae880b
+![Untitled](https://github.com/user-attachments/assets/989008ee-c690-4cc0-aade-14c24ca82874)
 
 
 
@@ -75,8 +75,6 @@ Do not append a trailing `.` to that command; Compose treats it as a service nam
 
 * **Orbital Tracking** — Real-time satellite positions via CelesTrak TLE data + SGP4 propagation (2,000+ active satellites, no API key required)
 * **Mission-Type Classification** — Color-coded by mission: military recon (red), SAR (cyan), SIGINT (white), navigation (blue), early warning (magenta), commercial imaging (green), space station (gold)
-
-![Gaza](https://github.com/user-attachments/assets/b84d099e-9bc7-41b7-b860-a91c38c0b765)
 
 ### 🌍 Geopolitics & Conflict
 
