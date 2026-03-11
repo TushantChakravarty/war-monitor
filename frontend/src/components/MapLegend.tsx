@@ -151,7 +151,7 @@ const LEGEND: LegendCategory[] = [
         name: "GEOPHYSICAL",
         color: "text-orange-400 border-orange-500/30",
         items: [
-            { svg: circle("#ff6600"), label: "Earthquake (size = magnitude)" },
+            { svg: circle("#ffcc00"), label: "Earthquake (yellow blob, size = magnitude)" },
         ],
     },
     {
@@ -192,7 +192,7 @@ const LEGEND: LegendCategory[] = [
         color: "text-purple-400 border-purple-500/30",
         items: [
             { svg: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.5"><rect x="3" y="3" width="18" height="6" rx="1" fill="#2e1065"/><rect x="3" y="11" width="18" height="6" rx="1" fill="#2e1065"/><circle cx="7" cy="6" r="1" fill="#a78bfa"/><circle cx="7" cy="14" r="1" fill="#a78bfa"/></svg>`, label: "Data Center" },
-            { svg: circle("#ef4444"), label: "Internet Outage Zone" },
+            { svg: circle("#888"), label: "Internet Outage Zone (grey)" },
         ],
     },
     {
