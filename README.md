@@ -60,74 +60,70 @@ Do not append a trailing `.` to that command; Compose treats it as a service nam
 
 ---
 
-##  🛠️ How to Update Shadowbroker
-To update to the latest version, follow the steps for your specific Operating System.
+##  🔄 **How to Update**
 
-🐧 Linux & 🍎 macOS (Terminal / Zsh / Bash)
+If you are coming from v0.8.0 or older, you must pull the new code and rebuild your containers to see the latest data layers and performance fixes.
+
+### 🐧 **Linux & 🍎 macOS** (Terminal / Zsh / Bash)
+
 Since these systems are Unix-based, you can use the helper script directly.
 
-Pull the latest code:
+**Pull the latest code:**
 ```bash
 git pull origin main
 ```
-Run the update script:
+**Run the update script:**
 ```bash
 ./compose.sh down
 ./compose.sh up --build -d
 ```
 
-🪟 Windows (Command Prompt or PowerShell)
+### 🪟 **Windows** (Command Prompt or PowerShell)
+
 Windows handles scripts differently. You have two ways to update:
 
-Method A: The Direct Way (Recommended)
+**Method A: The Direct Way (Recommended)**
 Use the docker compose commands directly. This works in any Windows terminal (CMD, PowerShell, or Windows Terminal).
 
-Pull the latest code:
-```bash
+**Pull the latest code:**
+```DOS
 git pull origin main
 ```
 
-Rebuild the containers:
-```bash
+**Rebuild the containers:**
+```DOS
 docker compose down
 docker compose up --build -d
 ```
 
-Method B: Using the Script (Git Bash)
+**Method B: Using the Script (Git Bash)**
+
 If you prefer using the ./compose.sh script on Windows, you must use Git Bash (installed with Git for Windows).
 
 Open your project folder, Right-Click, and select "Open Git Bash here".
 
-Run the Linux commands:
+**Run the Linux commands:**
 ```bash
 ./compose.sh down
 ./compose.sh up --build -d
 ```
+
 ---
 
-⚠️ Troubleshooting the Build
-If you still see the old version after updating:
+### ⚠️ **Stuck on the old version?**
 
-Force a clean build: 
-```bash
-docker compose build --no-cache
-```
+If the dashboard still shows old data after updating:
 
-Check logs for errors: 
-```bash
-docker compose logs -f backend
-```
+**Clear Docker Cache:** docker compose build --no-cache
 
-Prune old images: 
-```bash
-docker image prune -f
-```
+**Prune Images:** docker image prune -f
 
-Open `http://localhost:3000` to view the dashboard! *(Requires Docker or Podman)*
+**Check Logs:** ./compose.sh logs -f backend (or docker compose logs -f backend)
 
 ---
 
 ## ✨ Features
+
 
 ### 🛩️ Aviation Tracking
 
