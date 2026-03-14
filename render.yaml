@@ -1,0 +1,33 @@
+services:
+  # ── Backend ────────────────────────────────────────────────────────────────
+  - type: web
+    name: war-monitor-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: standard          # 2 GB RAM / 1 vCPU — upgrade if needed
+    healthCheckPath: /api/live-data/fast
+    envVars:
+      - key: AIS_API_KEY
+        sync: false         # Set in the Render dashboard
+      - key: OPENSKY_CLIENT_ID
+        sync: false
+      - key: OPENSKY_CLIENT_SECRET
+        sync: false
+      - key: LTA_ACCOUNT_KEY
+        sync: false         # Optional — leave blank to skip
+      - key: CORS_ORIGINS
+        sync: false         # Optional — leave blank for auto-detect
+
+  # ── Frontend ───────────────────────────────────────────────────────────────
+  - type: web
+    name: war-monitor-frontend
+    runtime: docker
+    dockerfilePath: ./frontend/Dockerfile
+    dockerContext: ./frontend
+    plan: starter
+    envVars:
+      # After the backend deploys, set this to:
+      #   https://war-monitor-backend.onrender.com
+      - key: BACKEND_URL
+        sync: false
